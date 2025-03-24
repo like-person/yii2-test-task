@@ -1,0 +1,2967 @@
+2025-03-23 10:14:14 [127.0.0.1][100][6snh8g8cj6ssr5h3opkpvjqdgi7i5713][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: 'CURRENT_TIMESTAMP' for column 'added_datetime' at row 1 in C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('INSERT INTO `re...')
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Schema.php(431): yii\db\Command->execute()
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\ActiveRecord.php(604): yii\db\Schema->insert('repositories', Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\ActiveRecord.php(570): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\BaseActiveRecord.php(688): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(83): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#8 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#11 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#12 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: 'CURRENT_TIMESTAMP' for column 'added_datetime' at row 1
+The SQL being executed was: INSERT INTO `repositories` (`url`, `user_id`, `history`, `added_datetime`) VALUES ('/alex/test', 1, 1, 'CURRENT_TIMESTAMP') in C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `re...')
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('INSERT INTO `re...')
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Schema.php(431): yii\db\Command->execute()
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\ActiveRecord.php(604): yii\db\Schema->insert('repositories', Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\ActiveRecord.php(570): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\BaseActiveRecord.php(688): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(83): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#8 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#11 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#12 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect datetime value: 'CURRENT_TIMESTAMP' for column 'added_datetime' at row 1
+)
+
+2025-03-23 10:14:14 [127.0.0.1][100][6snh8g8cj6ssr5h3opkpvjqdgi7i5713][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = [
+    '_csrf' => 'c-uYs67O7HdYGSZ8jWNr0vDNC9Zu28yojXxSsfGz1qQkpbXcmautEBshaAniMC7qwZxMmjeLjeD0RDv7p_2u5g=='
+    'Repositories' => [
+        'url' => '/alex/test'
+        'user_id' => '1'
+        'history' => '1'
+        'added_datetime' => 'CURRENT_TIMESTAMP'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6snh8g8cj6ssr5h3opkpvjqdgi7i5713'
+    '_identity' => '931c842941890b613fbb640b23988754fc07857a7cb7f9f773d90b73bd6c4964a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'upgijxl'
+    '__captcha/site/captchacount' => 1
+    '__id' => '100'
+    '__authKey' => 'test100key'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-YpuAzAJNtb1_RObIK7wAAPyE'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '251b57654a79396cf778621ab889a29cf35eeb676400df3c3c24679ae89875d1'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-38-1'
+    'CONTENT_LENGTH' => '242'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://yii2.local'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => 'PHPSESSID=6snh8g8cj6ssr5h3opkpvjqdgi7i5713; _identity=931c842941890b613fbb640b23988754fc07857a7cb7f9f773d90b73bd6c4964a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '9586'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742706854.0162
+    'REQUEST_TIME' => 1742706854
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 10:14:27 [127.0.0.1][100][6snh8g8cj6ssr5h3opkpvjqdgi7i5713][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'added_datetime' cannot be null in C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('INSERT INTO `re...')
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Schema.php(431): yii\db\Command->execute()
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\ActiveRecord.php(604): yii\db\Schema->insert('repositories', Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\ActiveRecord.php(570): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\BaseActiveRecord.php(688): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(83): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#8 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#11 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#12 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'added_datetime' cannot be null
+The SQL being executed was: INSERT INTO `repositories` (`url`, `user_id`, `history`, `added_datetime`) VALUES ('/alex/test', 1, 1, NULL) in C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `re...')
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('INSERT INTO `re...')
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\Schema.php(431): yii\db\Command->execute()
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\ActiveRecord.php(604): yii\db\Schema->insert('repositories', Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\ActiveRecord.php(570): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\BaseActiveRecord.php(688): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(83): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#8 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#11 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#12 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'added_datetime' cannot be null
+)
+
+2025-03-23 10:14:27 [127.0.0.1][100][6snh8g8cj6ssr5h3opkpvjqdgi7i5713][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = [
+    '_csrf' => 'KfJeT6eKlwzh8v9c_ussy-AX3XRXA70GXXbMVjrhI6B-vHMgkO_Wa6LKsSmRuGnz0UaaOA5T_E4kTqUcbK9b4g=='
+    'Repositories' => [
+        'url' => '/alex/test'
+        'user_id' => '1'
+        'history' => '1'
+        'added_datetime' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6snh8g8cj6ssr5h3opkpvjqdgi7i5713'
+    '_identity' => '931c842941890b613fbb640b23988754fc07857a7cb7f9f773d90b73bd6c4964a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'upgijxl'
+    '__captcha/site/captchacount' => 1
+    '__id' => '100'
+    '__authKey' => 'test100key'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-Ys-AzAJNtb1_RObIK-gAAPxM'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '251b57654a79396cf778621ab889a29cf35eeb676400df3c3c24679ae89875d1'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '23'
+    'H2_STREAM_TAG' => '1196-38-23'
+    'CONTENT_LENGTH' => '225'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://yii2.local'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => 'PHPSESSID=6snh8g8cj6ssr5h3opkpvjqdgi7i5713; _identity=931c842941890b613fbb640b23988754fc07857a7cb7f9f773d90b73bd6c4964a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '9586'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742706867.6938
+    'REQUEST_TIME' => 1742706867
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 11:49:31 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][ParseError] ParseError: Unclosed '{' on line 80 does not match ')' in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:122
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(661): class_exists('app\\controllers...')
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(620): yii\base\Module->createControllerByID('repositories')
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(546): yii\base\Module->createController('index')
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/in...', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2025-03-23 11:49:31 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-u--AzAJNtb1_RObIOJwAAPRM'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => 'a768467578151b554bb7d08ab9f987748e7866f735f4a8486ffcdf5adb500216'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '17'
+    'H2_STREAM_TAG' => '1196-80-17'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories-user%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '45499'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Findex'
+    'REQUEST_URI' => '/index.php?r=repositories%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742712571.5117
+    'REQUEST_TIME' => 1742712571
+    'argv' => [
+        0 => 'r=repositories%2Findex'
+    ]
+    'argc' => 1
+]
+2025-03-23 11:49:48 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][Error] Error: Class "app\models\UserRepositories" not found in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:81
+Stack trace:
+#0 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2025-03-23 11:49:48 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-vDOAzAJNtb1_RObIOMQAAPS4'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => 'a768467578151b554bb7d08ab9f987748e7866f735f4a8486ffcdf5adb500216'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '37'
+    'H2_STREAM_TAG' => '1196-80-37'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '45499'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742712588.1523
+    'REQUEST_TIME' => 1742712588
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 11:51:33 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\db\BaseActiveRecord::findAll(), 0 passed in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php on line 81 and exactly 1 expected in C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\db\BaseActiveRecord.php:117
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(81): yii\db\BaseActiveRecord::findAll()
+#1 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2025-03-23 11:51:33 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-vdOAzAJNtb1_RObIOMwAAPQM'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '0db6d52d6cbdae2d75e2e9965c3366093bfe99bd4b9ad106ea733d4dbe5efe0b'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-82-1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '16282'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742712692.9752
+    'REQUEST_TIME' => 1742712692
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 11:54:11 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][Error] Error: Class "app\controllers\Yii" not found in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:84
+Stack trace:
+#0 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2025-03-23 11:54:10 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-wEuAzAJNtb1_RObIONgAAPSE'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '2e01d607bf893f905d5505f24b424339485a5afbcfd145d0f2c45741155cd9b8'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-84-1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '23532'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742712850.7542
+    'REQUEST_TIME' => 1742712850
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 11:54:39 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][TypeError] TypeError: usort(): Argument #2 ($callback) must be a valid callback, function "cmp" not found or invalid function name in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:120
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(120): usort(Array, 'cmp')
+#1 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2025-03-23 11:54:38 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-wLuAzAJNtb1_RObIOOQAAPRc'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '2e01d607bf893f905d5505f24b424339485a5afbcfd145d0f2c45741155cd9b8'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '7'
+    'H2_STREAM_TAG' => '1196-84-7'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '23532'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742712878.8931
+    'REQUEST_TIME' => 1742712878
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 11:55:36 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][yii\base\ErrorException:8192] yii\base\ErrorException: Use of "self" in callables is deprecated in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:113
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8192, 'Use of "self" i...', 'C:\\OSPanel6\\hom...', 113)
+#1 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(113): usort(Array, 'self::cmp')
+#2 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#7 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2025-03-23 11:55:36 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-waOAzAJNtb1_RObIOPAAAPSU'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '2e01d607bf893f905d5505f24b424339485a5afbcfd145d0f2c45741155cd9b8'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '13'
+    'H2_STREAM_TAG' => '1196-84-13'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '23532'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742712936.2399
+    'REQUEST_TIME' => 1742712936
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 11:57:05 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][TypeError] TypeError: usort(): Argument #2 ($callback) must be a valid callback, class "RepositoriesController" not found in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:113
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(113): usort(Array, Array)
+#1 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2025-03-23 11:57:05 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-wweAzAJNtb1_RObIOPwAAPSg'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '4fe6b298fbc8db892abb41f57b0ceff6eb4ce847a12b1656953e5933e11c0e6f'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-88-1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '46840'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742713025.0565
+    'REQUEST_TIME' => 1742713025
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 11:57:30 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $array_slice in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:115
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(115): yii\base\ErrorHandler->handleError(2, 'Undefined varia...', 'C:\\OSPanel6\\hom...', 115)
+#1 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2025-03-23 11:57:30 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-w2uAzAJNtb1_RObIOQgAAPTE'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '4fe6b298fbc8db892abb41f57b0ceff6eb4ce847a12b1656953e5933e11c0e6f'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '7'
+    'H2_STREAM_TAG' => '1196-88-7'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '46840'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742713050.233
+    'REQUEST_TIME' => 1742713050
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 12:00:59 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][yii\base\ErrorException:2] yii\base\ErrorException: DOMDocument::loadHTMLFile(): Tag react-partial invalid in https://github.com/alex?tab=repositories, line: 195 in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:87
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'DOMDocument::lo...', 'C:\\OSPanel6\\hom...', 87)
+#1 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(87): DOMDocument->loadHTMLFile('https://github....')
+#2 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#7 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2025-03-23 12:00:57 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-xqeAzAJNtb1_RObIOXAAAPTI'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '700faf75385e4637f6ae3479c41d786a317cb462bfca430dcc607b300ba65e50'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-90-1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '56443'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742713257.0702
+    'REQUEST_TIME' => 1742713257
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 12:03:22 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][yii\base\ErrorException:2] yii\base\ErrorException: DOMDocument::loadHTMLFile(): Tag react-partial invalid in https://github.com/alex?tab=repositories, line: 195 in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:87
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'DOMDocument::lo...', 'C:\\OSPanel6\\hom...', 87)
+#1 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(87): DOMDocument->loadHTMLFile('https://github....')
+#2 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#7 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2025-03-23 12:03:20 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-yOOAzAJNtb1_RObIOXgAAPTY'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '8fbea00576083d15209b144520a39c7eca9e53f21deed6f293716cbeb5fcb64e'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-92-1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '36096'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742713400.5305
+    'REQUEST_TIME' => 1742713400
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 12:04:19 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined array key "link" in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:119
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(119): yii\base\ErrorHandler->handleError(2, 'Undefined array...', 'C:\\OSPanel6\\hom...', 119)
+#1 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2025-03-23 12:04:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-ybuAzAJNtb1_RObIOYAAAPSY'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '8fbea00576083d15209b144520a39c7eca9e53f21deed6f293716cbeb5fcb64e'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '5'
+    'H2_STREAM_TAG' => '1196-92-5'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '36096'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742713454.0896
+    'REQUEST_TIME' => 1742713454
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 12:07:15 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined array key "link" in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:118
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(118): yii\base\ErrorHandler->handleError(2, 'Undefined array...', 'C:\\OSPanel6\\hom...', 118)
+#1 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2025-03-23 12:07:09 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-zHeAzAJNtb1_RObIOagAAPSo'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '93f615972b49c33fb4ce19cc119044b97faeeabb52bf16d054b01949a6527940'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-94-1'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '31691'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742713629.9401
+    'REQUEST_TIME' => 1742713629
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 12:07:54 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined array key "link" in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:118
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(118): yii\base\ErrorHandler->handleError(2, 'Undefined array...', 'C:\\OSPanel6\\hom...', 118)
+#1 [internal function]: app\controllers\RepositoriesController->actionCreate()
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2025-03-23 12:07:48 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9-zROAzAJNtb1_RObIOawAAPRo'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '93f615972b49c33fb4ce19cc119044b97faeeabb52bf16d054b01949a6527940'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '3'
+    'H2_STREAM_TAG' => '1196-94-3'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '31691'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742713668.8679
+    'REQUEST_TIME' => 1742713668
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 17:29:32 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][ParseError] ParseError: syntax error, unexpected token "}" in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:193
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(661): class_exists('app\\controllers...')
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(620): yii\base\Module->createControllerByID('repositories')
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(546): yii\base\Module->createController('')
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2025-03-23 17:29:31 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z9_-q-AzAJNtb1_RObIP2gAAPRs'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '1f0891d66a4e3f9faaf58a889f81666fe3a7a23952110854e5f4f284500f149c'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-130-1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '30644'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories'
+    'REQUEST_URI' => '/index.php?r=repositories'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742732971.8744
+    'REQUEST_TIME' => 1742732971
+    'argv' => [
+        0 => 'r=repositories'
+    ]
+    'argc' => 1
+]
+2025-03-23 17:36:05 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][ParseError] ParseError: syntax error, unexpected variable "$rep", expecting ")" in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:192
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(661): class_exists('app\\controllers...')
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(620): yii\base\Module->createControllerByID('repositories')
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(546): yii\base\Module->createController('create')
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/cr...', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2025-03-23 17:36:05 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z-AANeAzAJNtb1_RObIP8gAAPzs'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => 'b0da76fbb2227d8a7aa93142d334b5eafc2948ae38b2eec76ce67156c656d253'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-134-1'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '3258'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=repositories%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742733365.1683
+    'REQUEST_TIME' => 1742733365
+    'argv' => [
+        0 => 'r=repositories%2Fcreate'
+    ]
+    'argc' => 1
+]
+2025-03-23 22:45:37 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][ParseError] ParseError: syntax error, unexpected identifier "createFromFormat", expecting variable or "$" in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:214
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(661): class_exists('app\\controllers...')
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(620): yii\base\Module->createControllerByID('repositories')
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(546): yii\base\Module->createController('index')
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/in...', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2025-03-23 22:45:37 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z-BIwOAzAJNtb1_RObIQAAAAPys'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '678cae4f9e6af914c3c352f3608fc0ba85daa395d2747360cbb448c3291d0ef6'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-143-1'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '48739'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Findex'
+    'REQUEST_URI' => '/index.php?r=repositories%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742751936.9462
+    'REQUEST_TIME' => 1742751936
+    'argv' => [
+        0 => 'r=repositories%2Findex'
+    ]
+    'argc' => 1
+]
+2025-03-23 22:46:18 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][ParseError] ParseError: syntax error, unexpected identifier "createFromFormat", expecting variable or "$" in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:214
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(661): class_exists('app\\controllers...')
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(620): yii\base\Module->createControllerByID('repositories')
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(546): yii\base\Module->createController('index')
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/in...', Array)
+#5 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2025-03-23 22:46:18 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z-BI6eAzAJNtb1_RObIQAQAAPxQ'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '678cae4f9e6af914c3c352f3608fc0ba85daa395d2747360cbb448c3291d0ef6'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '3'
+    'H2_STREAM_TAG' => '1196-143-3'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '48739'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Findex'
+    'REQUEST_URI' => '/index.php?r=repositories%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742751977.9439
+    'REQUEST_TIME' => 1742751977
+    'argv' => [
+        0 => 'r=repositories%2Findex'
+    ]
+    'argc' => 1
+]
+2025-03-23 22:47:03 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][yii\base\ErrorException:64] yii\base\ErrorException: Access level to app\controllers\RepositoriesController::beforeAction() must be public (as in class yii\web\Controller) in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:232
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2025-03-23 22:47:03 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z-BJF-AzAJNtb1_RObIQAwAAPyY'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '678cae4f9e6af914c3c352f3608fc0ba85daa395d2747360cbb448c3291d0ef6'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '7'
+    'H2_STREAM_TAG' => '1196-143-7'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '48739'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Findex'
+    'REQUEST_URI' => '/index.php?r=repositories%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742752023.4244
+    'REQUEST_TIME' => 1742752023
+    'argv' => [
+        0 => 'r=repositories%2Findex'
+    ]
+    'argc' => 1
+]
+2025-03-23 22:47:25 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][Error] Error: Class "app\controllers\SiteParams" not found in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php:213
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php(234): app\controllers\RepositoriesController->cronHandler()
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(176): app\controllers\RepositoriesController->beforeAction(Object(yii\base\InlineAction))
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('repositories/in...', Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#6 {main}
+2025-03-23 22:47:25 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'repositories/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z-BJLeAzAJNtb1_RObIQBQAAPw8'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '678cae4f9e6af914c3c352f3608fc0ba85daa395d2747360cbb448c3291d0ef6'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '11'
+    'H2_STREAM_TAG' => '1196-143-11'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '48739'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Findex'
+    'REQUEST_URI' => '/index.php?r=repositories%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742752045.4989
+    'REQUEST_TIME' => 1742752045
+    'argv' => [
+        0 => 'r=repositories%2Findex'
+    ]
+    'argc' => 1
+]
+2025-03-23 23:22:09 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\base\Controller::__construct(), 0 passed in C:\OSPanel6\home\yii2.local\controllers\SiteController.php on line 132 and at least 2 expected in C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php:91
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\controllers\SiteController.php(132): yii\base\Controller->__construct()
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(176): app\controllers\SiteController->beforeAction(Object(yii\base\InlineAction))
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#4 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#6 {main}
+2025-03-23 23:22:09 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z-BRUOAzAJNtb1_RObIQNwAAPRY'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '7fc5caab51e99696b9b35bbe4a51ac1d36b35399e5cc8a4b976a1502d9873dd7'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '1'
+    'H2_STREAM_TAG' => '1196-153-1'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '49071'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742754128.9186
+    'REQUEST_TIME' => 1742754128
+    'argv' => [
+        0 => 'r=site%2Findex'
+    ]
+    'argc' => 1
+]
+2025-03-23 23:53:52 [127.0.0.1][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php on line 43. in C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Response.php:369
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Response.php(342): yii\web\Response->sendHeaders()
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(390): yii\web\Response->send()
+#2 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2025-03-23 23:53:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'repositories/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z-BYuuAzAJNtb1_RObIQQgAAPRI'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '97b73d166e75a54c1c0970022148f4f0ec378ffacbc887e59c0508a419113a64'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '17'
+    'H2_STREAM_TAG' => '1196-157-17'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '51493'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Findex'
+    'REQUEST_URI' => '/index.php?r=repositories%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742756026.4224
+    'REQUEST_TIME' => 1742756026
+    'argv' => [
+        0 => 'r=repositories%2Findex'
+    ]
+    'argc' => 1
+]
+2025-03-23 23:55:35 [127.0.0.1][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in C:\OSPanel6\home\yii2.local\controllers\RepositoriesController.php on line 43. in C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Response.php:369
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Response.php(342): yii\web\Response->sendHeaders()
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(390): yii\web\Response->send()
+#2 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2025-03-23 23:55:35 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'repositories/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z-BZJ-AzAJNtb1_RObIQSgAAPSg'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '0b73a7ee43da36df3e349d9c5e9e79ed41c54b0249468c6eab52e1e9623ab031'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '15'
+    'H2_STREAM_TAG' => '1196-159-15'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '5078'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=repositories%2Findex'
+    'REQUEST_URI' => '/index.php?r=repositories%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742756135.4899
+    'REQUEST_TIME' => 1742756135
+    'argv' => [
+        0 => 'r=repositories%2Findex'
+    ]
+    'argc' => 1
+]
+2025-03-24 00:12:46 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][error][Error] Error: Class "Html" not found in C:\OSPanel6\home\yii2.local\views\site\index.php:23
+Stack trace:
+#0 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\OSPanel6\\hom...', Array)
+#2 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\OSPanel6\\hom...', Array, Object(app\controllers\SiteController))
+#3 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#4 C:\OSPanel6\home\yii2.local\controllers\SiteController.php(68): yii\base\Controller->render('index', Array)
+#5 [internal function]: app\controllers\SiteController->actionIndex()
+#6 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#8 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#9 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#10 C:\OSPanel6\home\yii2.local\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\OSPanel6\home\yii2.local\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2025-03-24 00:12:46 [127.0.0.1][-][kcpcpe19icgc625ot1psc8v5321cskl7][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB\";}'
+    'PHPSESSID' => 'kcpcpe19icgc625ot1psc8v5321cskl7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Z-BdLuAzAJNtb1_RObIQdwAAPRY'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'yii2.local'
+    'SSL_SERVER_S_DN_CN' => 'yii2.local'
+    'SSL_SERVER_I_DN_Email' => 'root@ospanel.local'
+    'SSL_SERVER_I_DN_C' => 'EU'
+    'SSL_SERVER_I_DN_ST' => 'Local Network'
+    'SSL_SERVER_I_DN_O' => 'Open Server Panel'
+    'SSL_SERVER_I_DN_CN' => 'Open Server Panel'
+    'SSL_SERVER_SAN_DNS_0' => 'yii2.local'
+    'SSL_SERVER_SAN_DNS_1' => 'www.yii2.local'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.59'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/3.1.5'
+    'SSL_PROTOCOL' => 'TLSv1.3'
+    'SSL_SECURE_RENEG' => 'false'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'TLS_AES_128_GCM_SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '407605F567DFF07A148A60875352C8CE058C8ECD'
+    'SSL_SERVER_V_START' => 'Mar 22 15:05:46 2025 GMT'
+    'SSL_SERVER_V_END' => 'Mar 20 15:05:46 2035 GMT'
+    'SSL_SERVER_S_DN' => 'CN=yii2.local'
+    'SSL_SERVER_I_DN' => 'CN=Open Server Panel,O=Open Server Panel,ST=Local Network,C=EU,emailAddress=root@ospanel.local'
+    'SSL_SERVER_A_KEY' => 'id-ecPublicKey'
+    'SSL_SERVER_A_SIG' => 'ecdsa-with-SHA256'
+    'SSL_SESSION_ID' => '80cbed673e502efd62a2186f3773574ca09c944624ba7a2aca385eebd9bd1825'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP2' => 'on'
+    'H2PUSH' => 'off'
+    'H2_PUSH' => 'off'
+    'H2_PUSHED' => ''
+    'H2_PUSHED_ON' => ''
+    'H2_STREAM_ID' => '17'
+    'H2_STREAM_TAG' => '1196-165-17'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Iron Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://yii2.local/index.php?r=repositories-user%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_COOKIE' => '_csrf=7f74f773c71b3fe788d32d21a9091d845dcc44395bd5567baa812ef9d539dc52a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WN-o7eAgC8NuoSE81QGLYPAHy8iJVNxB%22%3B%7D; PHPSESSID=kcpcpe19icgc625ot1psc8v5321cskl7'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_HOST' => 'yii2.local'
+    'PATH' => 'C:\\OSPanel6\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\Apache\\bin;C:\\OSPanel6\\modules\\PHP-8.2\\PHP;C:\\OSPanel6\\data\\PHP-8.2\\default\\composer\\vendor\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii2.local'
+    'SERVER_ADDR' => '127.127.126.33'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel6/home/yii2.local/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel6/home/yii2.local/web/index.php'
+    'REMOTE_PORT' => '61879'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/2.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1742757166.6949
+    'REQUEST_TIME' => 1742757166
+    'argv' => [
+        0 => 'r=site%2Findex'
+    ]
+    'argc' => 1
+]
